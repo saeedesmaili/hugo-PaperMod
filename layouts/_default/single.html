@@ -39,9 +39,17 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
+    <hr />
+    <p class="post-content-cta">
+      Comment? Reply via
+      <a href="mailto:me@saeedesmaili.com?subject=Re: {{ .Title }}">Email</a>,
+      <a href="https://mastodon.world/@saeedesmaili" target="_blank">Mastodon</a> or
+      <a href="https://twitter.com/saeedesmaili" target="_blank">Twitter</a>.
+    </p>
   </div>
   {{- end }}
 
+  
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
