@@ -39,7 +39,6 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
-    <hr />
     <p class="post-content-cta">
       Comment? Reply via
       <a href="mailto:me@saeedesmaili.com?subject=Re: {{ .Title }}">Email</a>,
@@ -48,6 +47,7 @@
     </p>
   </div>
   {{- end }}
+  {{ partial "newsletter.html" . }}
 
   
   <footer class="post-footer">
