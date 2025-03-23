@@ -39,12 +39,7 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
-    <p class="post-content-cta">
-      Comment? Reply via
-      <a href="mailto:me@saeedesmaili.com?subject=Re: {{ .Title }}">Email</a>,
-      <a href="https://bsky.app/profile/saeedesmaili.com" target="_blank">Bluesky</a> or
-      <a href="https://twitter.com/saeedesmaili" target="_blank">Twitter</a>.
-    </p>
+    {{ partial "comment_cta.html" . }}
   </div>
   {{- end }}
   {{ partial "newsletter.html" . }}
