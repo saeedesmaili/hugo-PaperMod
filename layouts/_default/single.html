@@ -65,19 +65,6 @@
   {{- end }}
 </article>
 
-{{ $related := .Site.RegularPages.Related . | first 5 }} {{ if $related }}
-<div>
-  <div class="prose">
-    <h3>Related Posts</h3>
-  </div>
-  {{ with $related }}
-  <ul>
-    {{ range . }}
-    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-    {{ end }}
-  </ul>
-  {{ end }}
-</div>
-{{- end -}}
+{{- partial "related.html" . -}}
 
 {{- end }}{{/* end main */}}
