@@ -42,9 +42,7 @@
     {{ partial "comment_cta.html" . }}
   </div>
   {{- end }}
-  {{ partial "newsletter.html" . }}
-
-  
+    
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
@@ -64,6 +62,8 @@
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
+
+{{ partial "newsletter.html" . }}
 
 {{- partial "related.html" . -}}
 
